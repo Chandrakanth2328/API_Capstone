@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joke Generator</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Random Joke Generator</h1>
+    <% if (data && data.joke) { %>
+        <p><%= data.joke %></p>
+    <% } else if (data && data.setup) { %>
+        <p><%= data.setup %> - <%= data.delivery %></p>
+    <% } else if (data && data.error) { %>
+        <p><%= data.error %></p>
+    <% } else { %>
+        <p>Click below to get a joke!</p>
+    <% } %>
+    <a href="/joke"><button>Get a Joke</button></a>
+</body>
+</html>
